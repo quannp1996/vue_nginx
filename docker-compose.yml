@@ -1,0 +1,9 @@
+services:
+  vue-nginx:
+    build:
+      context: . # Thư mục chứa Dockerfile
+    container_name: vue-nginx-v2
+    ports:
+      - "80:80" # Map cổng 8080 của host với cổng 80 của container
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf # Cấu hình Nginx (tùy chọn)
